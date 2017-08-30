@@ -2,7 +2,7 @@
 layout: contact
 title: Contact us
 pagetitle: |
-  ## Here is where you can find the humans behind Fully Studios. If you’re not sure who to call, just ring [+46 738 07 30 72](tel:+46738073072). Or drop a line at [hello@fullystudios.se](mailto:hello@fullystudios.se). Our doors are always open to new friends, so do get in touch!
+  ## Here is where you can find the humans behind Fully Studios. If you’re not sure who to call, just ring [+46 738 07 30 72](tel:+46738073072). Or drop a line at [hello@fullystudios.se](mailto:hello@fullystudios.se). Our doors and inboxes are always open to new friends.  
 
   ### [Looking for someone special?](#we-are-fully)
 permalink: /contact/
