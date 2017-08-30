@@ -1,7 +1,7 @@
 ---
 layout: curious/opinionated-ecommerce
 title:  "Opinionated e&#x2011;commerce"
-subtitle: "Lorem ipsum"
+subtitle: "Fully’s web store experiments"
 date:   2016-11-30 12:00:00 +0100
 categories: e-commerce, web, UX
 slug: opinionated-ecommerce
