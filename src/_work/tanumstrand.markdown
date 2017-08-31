@@ -20,8 +20,7 @@ ingress: |
 
 section1: |
   ### In recent years, TanumStrand has undertaken some serious upgrades. 
-  They completely renovated their spa, transformed their restaurant and even overhauled their website.  
-  In this season of transformation, they wanted us to produce a few commercials to spotlight their fresh new look and set the tone as a place of rest and rejuvenation.
+  They completely renovated their spa, transformed their restaurant and even overhauled their website. In this season of transformation, they wanted us to produce a few commercials to spotlight their fresh new look and set the tone as a place of rest and rejuvenation.
   
   Rather than focus on advertising their new facilities, I wanted to create an immersive experience that would stir longing in the viewer. In other words: we weren’t going to sell the spa. We were going to sell the peace. 
 
