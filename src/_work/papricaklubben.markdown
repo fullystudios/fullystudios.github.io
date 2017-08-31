@@ -56,7 +56,9 @@ section5_videos:
   - 221886271
 
 section6: |
-  #### The colors, sound, characters, widely explorable world and numerous opportunities for interaction all conspire to keep kids hangin’ around, both passively and actively learning. The end goal here is for kids to regard the fruit & veg on their plate with curiosity and interest, rather than as a banal yet sinister enemy that sprang from the dirt.
+  #### The colors, sound, characters, widely explorable world and numerous opportunities for interaction all conspire to keep kids hangin’ around, both passively and actively learning. 
+  
+  #### The end goal here is for kids to regard the fruit & veg on their plate with curiosity and interest, rather than as a banal yet sinister enemy that sprang from the dirt.
 
 ---
 
