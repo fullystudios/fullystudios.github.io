@@ -1,7 +1,7 @@
 ---
 layout: work/malbaren
 title:  "Målbaren"
-subtitle: "High quality fast food"
+subtitle: "Fitness meets #foodgoals"
 author: "Jonas Sandstedt"
 author-email: jonas@fullyflared.se
 button-text: View case study
@@ -18,7 +18,7 @@ background-image_720: "hero_720.jpg"
 background-image_color: "#49B276"
 
 ingress: |
-  Matbaren (“The Food Bar”) supplies grocery stores across Sweden with bright buffet carts, so customers can assemble their own perfect to-go meal in a snap. 
+  Matbaren (“The Food Bar”) supplies grocery stores across Sweden with nifty buffet carts, so customers can assemble their own  to-go meal on the fly. 
   
   They have come up with several different buffet concepts, from the classic salad bar to haute cuisine. 
 
