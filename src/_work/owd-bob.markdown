@@ -52,18 +52,15 @@ section3: |
 
   For the logo, we opted for hand-lettering, as a way of simulating the creative process of the artist. While Owd Bob is closed, the landing page features a picture of the Mona Lisa -- the famous keeper of secrets -- with the logo concealing her face.
 
-  Visit Owd Bob on<br>
-  [instagram](https://instagram.com)
-
 image2_2880: "mona_2880.jpg"
 image2_1440: "mona_1440.jpg"
 image2_alt: "Mona lisa with Owd Bobs logo masking her face"
 
 section4: |
-  ## The Secret clubhouse
+  ## The secret clubhouse
   When it came to marketing, we didn’t go for range – we aimed for exclusivity. We started off only using Instagram. And we primarily promoted featured artists in our posts. This way we could focus on varied, quality content. We also sought to only follow interesting artists, not people likely to follow us back. Every follower should be someone interested in art, not interested in getting followers of their own.
 
-  The opening hours were revealed on Instagram only. If you missed them, you needed to go back and check. Otherwise the opportunity was gone and the store’s “doors” closed yet again. We hoped this would inspire people to actively visit our profile, and to see the store opening as an event.
+  The opening hours were revealed on Instagram only. If you missed them, the opportunity would pass you by, never to return. We hoped this would inspire people to actively visit our profile, and to see the store opening as an event.
 
 imageline:
   - "post-1.jpg"
