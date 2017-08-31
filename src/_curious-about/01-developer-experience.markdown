@@ -63,9 +63,9 @@ section3: |
 
   It does take a bit more time initially, but the time saved further down the road makes up for it in spades. As Frodo says, “shortcuts make for very long delays.” So where back-end coding is concerned, we’re on the path to making test-driven development our standard method. 
 
-  The frontend is a different story. It’s less suited to this method for a variety of reasons, but primarily because the “look” and “feel” of a website can’t be broken down into such technical parts.   
+  The frontend is a different story. It’s less suited to this method for a variety of reasons, but primarily because the look and feel of a website can’t be broken down into such technical parts.   
 
-  So in the statistics here, you’ll see a pretty wide gap between Fully’s those focused on backend (Mikael, Martina) and frontend (Jonathan, Jonas). 
+  So in the statistics here, you’ll see a pretty wide gap between Fully’s those focused on back-end (Mikael, Martina) and front-end (Jonathan, Jonas). 
 
 section3-prog_header: |
   Progress on test-driven development
@@ -93,7 +93,7 @@ section4: |
 
   We would like to do more of it, but we’re a small agency handling several projects in once. Effectively cutting our coding team in half to pair-program 100% isn’t feasible at the moment. So we’re trying to make smart use of it -- pairing up to code difficult transitions -- but we would still like to expand the practice.  
 
-  Again, this method is more suited to the problem-solving of backend code, rather than the taste-based decisions of front end.  
+  Again, this method is more suited to the problem-solving of back-end code, rather than the taste-based decisions of front-end.  
 
 section4-prog_header: |
   Progress on pair programming
@@ -119,7 +119,7 @@ section5: |
 
   But it is important to “speak with one voice” -- to have the code in a certain project consistent throughout. So we’re working towards creating a full set of coding standards (mutually agreed upon, of course.) We’re currently looking at PSR2 standards and adapting them according to what we like best. 
 
-  Having clear expectations about how something should be written allows us to stop sweating over small details and focus on the bigger stuff. Though the general thought is to leave some breathing room, especially where the artsy frontend is concerned. And because we’re not robots. 
+  Having clear expectations about how something should be written allows us to stop sweating over small details and focus on the bigger stuff. Though the general thought is to leave some breathing room, especially where the artsy front-end is concerned. And because we’re not robots. 
 
 
 section5-prog_header: |
