@@ -19,7 +19,9 @@ background-image_720: "hero_720.jpg"
 background-image_color: "#c9cba3"
 
 ingress: |
-  Given that Fully is a digital studio, the majority of our creations live, move and die on the Internet. This is a glorious thing; as an outlet for creativity, the digital world is boundless and constantly proffers new tools. 
+  Given that Fully is a digital studio, the majority of our creations live, move and die on the Internet. 
+  
+  This is a glorious thing; as an outlet for creativity, the digital world is boundless and constantly proffers new tools. 
 
 section1: |
   Growing up, my grandma was an avid collector of paintings. 
