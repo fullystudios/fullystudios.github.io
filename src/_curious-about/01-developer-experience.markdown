@@ -14,9 +14,9 @@ ingress: |
   A term that has been gaining popularity in the past few years is “developer experience.” It’s like “user experience” but for APIs. Meaning how easy it is for a developer to navigate a specific coding platform.  
 
 section1: |
-  But we’re of the opinion that “developer experience” can encompass more than that. But maybe just for the purposes of this article, what if it could express all aspects of what it feels like to be a coder? What if it could refer to the methods that dial down the frustration, and dial up the bliss of creative problem-solving? 
+  But we’re of the opinion that “developer experience” can encompass more than that. But maybe just for the purposes of this Curiosity, what if it could express all aspects of what it feels like to be a coder? What if it could refer to the methods that dial down the frustration and dial up the bliss of creative problem-solving? 
 
-  This is an ongoing curiosity and pursuit of ours. We’re looking to make our “developer experience” at Fully as close to blissful as it can get. For two reasons:
+  This is an ongoing pursuit of ours. We’re looking to make our “developer experience” at Fully as close to blissful as it can get. For two reasons:
 
   1. It makes our work lives happy. 
   2. It makes the code way better.
@@ -36,8 +36,6 @@ section2: |
   Greater modularity makes for a happier developer experience. On top of all the other benefits, it makes the code more immediately understandable to one another so we can more seamlessly work as a team. 
 
   Mostly is just takes discipline. To finish what you set out to do rather than skipping around or making quick patches. 
-
-  Laravel framework (just Wordpress to working with new framework) 
 
 section2-prog_header: |
   Progress on modularity thus far
@@ -95,7 +93,7 @@ section4: |
 
   We would like to do more of it, but we’re a small agency handling several projects in once. Effectively cutting our coding team in half to pair-program 100% isn’t feasible at the moment. So we’re trying to make smart use of it -- pairing up to code difficult transitions -- but we would still like to expand the practice.  
 
-  Again, this method is more suited to the problem-solving of backend code, rather than the taste-based decisions of frontend.  
+  Again, this method is more suited to the problem-solving of backend code, rather than the taste-based decisions of front end.  
 
 section4-prog_header: |
   Progress on pair programming
