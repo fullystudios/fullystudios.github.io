@@ -4,7 +4,7 @@ title:  Liseberg
 subtitle: "A Halloween click-or-treat"
 author: "Jonathan David Asp"
 author-email: jonathan.asp@fullystudios.se
-button-text: Get scared
+button-text: View case
 date:   2017-06-08 12:00:00 +0100
 categories: film
 slug: click-or-treat
