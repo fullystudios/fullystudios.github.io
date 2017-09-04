@@ -2,7 +2,7 @@
 layout: case-film
 title:  "Kakservice"
 subtitle: "Cookies for a cause? Take my money!"
-button-text: View film
+button-text: View case
 date:   2016-05-11 12:00:00 +0100
 categories: film
 slug: kakservice
