@@ -4,7 +4,7 @@ title:  "Målbaren"
 subtitle: "Fitness meets #foodgoals"
 author: "Jonas Sandstedt"
 author-email: jonas@fullyflared.se
-button-text: View case study
+button-text: View case
 date:   2017-04-27 12:00:00 +0100
 categories: design, branding, web
 slug: malbaren
