@@ -4,7 +4,7 @@ title:  "Paprica&shy;klubben"
 subtitle: "An interactive world for ICA's children's club"
 author: "Robin Kollberg"
 author-email: robin.kollberg@fullystudios.se
-button-text: View case study
+button-text: View case
 date:   2017-04-27 12:00:00 +0100
 categories: design, branding, web
 slug: papricaklubben
