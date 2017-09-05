@@ -37,112 +37,7 @@ layout: curious
     </div>
     <div class="grid__column-small flexcenter">
         {% comment %}Org see codepen: https://codepen.io/fullystudios/pen/NgqVrr{% endcomment %}
-        <style>
-        .follow-frank {
-            width: 50%;
-            position: relative;
-        }
-        .follow-frank:hover .frank-cheek {
-            -webkit-transform: translate3D(0, 0, 0);
-                    transform: translate3D(0, 0, 0);
-        }
-        .follow-frank .frank-head {
-            width: 100%;
-            height: auto;
-        }
-        .follow-frank .frank-cheek {
-            position: absolute;
-            top: 49.4%;
-            left: 60%;
-            width: 20%;
-            height: auto;
-            -webkit-transform: translate3D(10%, 10%, 0);
-                    transform: translate3D(10%, 10%, 0);
-            -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.24, 1.32, 0.52, -1.73);
-            transition: -webkit-transform 0.1s cubic-bezier(0.24, 1.32, 0.52, -1.73);
-            transition: transform 0.1s cubic-bezier(0.24, 1.32, 0.52, -1.73);
-            transition: transform 0.1s cubic-bezier(0.24, 1.32, 0.52, -1.73), -webkit-transform 0.1s cubic-bezier(0.24, 1.32, 0.52, -1.73);
-        }
-        .follow-frank .frank-pupil {
-            position: absolute;
-            width: 40%;
-            height: auto;
-        }
-        .follow-frank .frank-eye-left {
-            top: 38.8%;
-            left: 26%;
-        }
-        .follow-frank .frank-eye-right {
-            top: 38.8%;
-            left: 60%;
-        }
-        .follow-frank .frank-eye-left, .follow-frank .frank-eye-right {
-            width: 16.5%;
-            height: 0;
-            padding-bottom: 17%;
-            position: absolute;
-            overflow: hidden;
-        }
-        </style>
-        <div class="follow-frank" id="follow-frank">
-            <img class="frank-head" id="frank-head" src="/assets/curious-about/{{page.slug}}/head-frank.png" alt="Frankenstein" draggable="false">
-            <div class="frank-eye-left" id="frank-eye-left">
-                <img class="frank-pupil" id="frank-pupil-1" src="/assets/curious-about/{{page.slug}}/head-frank-pupil-left.png" alt="Frankenstein" draggable="false">
-            </div>
-            <div class="frank-eye-right" id="frank-eye-right">
-                <img class="frank-pupil" id="frank-pupil-2" src="/assets/curious-about/{{page.slug}}/head-frank-pupil-right.png" alt="Frankenstein" draggable="false">
-            </div>
-            <img class="frank-cheek" id="frank-cheek" src="/assets/curious-about/{{page.slug}}/head-frank-cheek.png" alt="Frankenstein" draggable="false">
-        </div>
-        <script>
-        /**
-        * EyeMover.
-        * @param {object} eyecontainer id - Define the container of the pupils (for the move limit area)
-        * @param {object} eyepupil id - The actual pupil to be moved
-        * @param {int} speed id - The speed that the pupil should be moved
-        */
-        var EyeMover = function(eyecontainer, eyepupil, speed){
-            var mouseX = 0, mouseY = 0, tranX = 0, tranY = 0,
-                ec = document.getElementById(eyecontainer),
-                ep = document.getElementById(eyepupil),
-                limitX = ec.offsetWidth - ep.offsetWidth,
-                limitY = ec.offsetHeight - ep.offsetHeight,
-                offset = ec.getBoundingClientRect();
-
-            window.addEventListener("resize", function() {
-                limitX = ec.offsetWidth - ep.offsetWidth;
-                limitY = ec.offsetHeight - ep.offsetHeight;
-                offset = ec.getBoundingClientRect();
-                //console.log('resize');
-            });
-            
-            window.addEventListener( 'mousemove', function(e){
-                mouseX = Math.min(e.pageX - offset.left, limitX);
-                mouseY = Math.min(e.clientY - offset.top, limitY);
-                //mouseY = e.pageY;
-                if (mouseX < 0) mouseX = 0;
-                if (mouseY < 0) mouseY = 0;
-                //console.log('e ', e);
-                //console.log('e.pageY ', e.pageY);
-                //console.log('offset.top ', offset.top);
-                //console.log('limitY', limitY);
-            });
-            
-            // Aniamte using requestAnimationFrame
-            function animate() {
-                tranX += (mouseX - tranX) / speed;
-                tranY += (mouseY - tranY) / speed;
-                ep.style.transform = 'translate3D(' + tranX + 'px, ' + tranY + 'px, 0)';
-                
-                window.requestAnimationFrame(animate);
-            }
-            window.requestAnimationFrame(animate);
-        };
-
-        // init eyes
-        var eye1 = new EyeMover("frank-eye-left",  "frank-pupil-1", 12);
-        var eye2 = new EyeMover("frank-eye-right", "frank-pupil-2", 12);  
-        </script>
+        <iframe style="width: 300px; height: 366px;" src="/assets/curious-about/{{page.slug}}/frank.html" frameborder="0"></iframe>
     </div>
 </div>
 {% endunless %}
@@ -163,31 +58,21 @@ layout: curious
 
 {% unless page.section5 == nil %}
 <div class="section section--5">
-    {{ page.section5 | markdownify }}
-    
-    <div class="imagegrid">
-        <div class="imagegrid__image imagegrid__image--two">
-            <img class="image"
-                alt="{{page.section5-image1_alt}}"
-                width="1440" height="643"
-                src="/assets/curious-about/{{page.slug}}/{{page.section5-image1_medium}}" 
-                srcset="/assets/curious-about/{{page.slug}}/{{page.section5-image1_medium}} 14400w,
-                        /assets/curious-about/{{page.slug}}/{{page.section5-image1_small}} 720w"
-                sizes="(min-width: 580px) 50vw,
-                        100vw">
-        </div>
-        <div class="imagegrid__image imagegrid__image--two">
-            <img class="image"
-                alt="{{page.section5-image2_alt}}"
-                width="1440" height="643"
-                src="/assets/curious-about/{{page.slug}}/{{page.section5-image2_medium}}" 
-                srcset="/assets/curious-about/{{page.slug}}/{{page.section5-image2_medium}} 14400w,
-                        /assets/curious-about/{{page.slug}}/{{page.section5-image2_small}} 720w"
-                sizes="(min-width: 580px) 50vw,
-                        100vw">
-        </div>
+    <div class="sectionspacing-small">
+        {{ page.section5 | markdownify }}
+    </div>
+    <div style="position: relative">
+    <video class="inlinevideo"
+        data-videoplayer 
+        autoplay muted playsinline loop>
+        <source src="{{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{ page.section5_video }}">
+    </video>
+    <div class="flexcenter" style="position: absolute; bottom: 2em; right: 2em; left: 2em">
+        <a href="{{page.section5_link}}" class="button"><span>Visit site</span></a>
+    </div>
     </div>
 </div>
+
 {% endunless %}
 
 {% unless page.section6 == nil %}
@@ -202,9 +87,7 @@ layout: curious
         }
     </style>
     <div id="{{page.slug}}_bg" class="background-image background-image--largepadding flexcenter">
-        
-            {{ page.section6 | markdownify }}
-      
+        {{ page.section6 | markdownify }}
     </div>
 {% endunless %}
 
@@ -214,17 +97,27 @@ layout: curious
 </div>
 {% endunless %}
 
-<div style="padding: 4em; color: red">
-    <h2>[example of hand drawn thing →  javascript animation]</h2>
+<div class="section grid">
+    <video class="inlinevideo grid__column1-2"
+        data-videoplayer 
+        autoplay muted playsinline loop>
+        <source src="{{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{ page.section8_video1 }}">
+    </video>
+    <video class="inlinevideo grid__column2-2"
+        data-videoplayer 
+        autoplay muted playsinline loop>
+        <source src="{{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{ page.section8_video2 }}">
+    </video>
 </div>
-
 
 {% unless page.section8 == nil %}
 <div class="section section--8">
     {{ page.section8 | markdownify }}
+    {% unless page.cta == nil %}
     <p>
         <a href="{{site.baseurl}}/contact" class="button"><span>{{page.cta}}</span></a>
     </p>
+    {% endunless %}    
 </div>
 {% endunless %}
  

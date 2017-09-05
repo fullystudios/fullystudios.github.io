@@ -6,6 +6,10 @@ pagetitle: |
 permalink: /work/
 slug: work
 background-color: "#f8f8f8"
+
+sublink: '#projects'
+sublink-text: Featured projects
+
 reel-text: Showreel 2017
 reel-vimeo-id: 222507866
 

@@ -2,7 +2,9 @@ module.exports =
 class Opinioated {
 	constructor () {
         const swipers = document.querySelectorAll('[data-coeswipe]');
-        swipers.forEach(swiper => {
+        const swipersArr = [...swipers];
+        
+        swipersArr.forEach(swiper => {
             this.setup(swiper);
         });
     }

@@ -18,17 +18,17 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}?{{site.time | date: '%s%N'}}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | relative_url }}">
 
-    <!--<script type="text/javascipt" src="{{ "/js/jquery-2.2.4.min.js" | prepend: site.baseurl }}"></script>-->
+    <!--<script type="text/javascipt" src="{{ "/js/jquery-2.2.4.min.js" | relative_url }}"></script>-->
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script> -->
     <!-- <script>
       // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
-    <script type="text/javascipt" src="{{ "/js/picturefill.min.js" | prepend: site.baseurl }}" async></script> -->
+    <script type="text/javascipt" src="{{ "/js/picturefill.min.js" | relative_url }}" async></script> -->
     <!--<script type="text/javascipt" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.6.8/bodymovin_light.min.js" async></script>-->
     {{page.header-scripts}}
     

@@ -17,6 +17,15 @@ background-image_1440: "hero.jpg"
 background-image_720: "hero_720.jpg"
 background-image_color: "#49B276"
 
+casetop-bg_640: casetop_bg.jpg
+casetop-bg_1440: casetop_bg@2x.jpg
+casetop-image1_small: casetop_image1.jpg
+casetop-image1_medium: casetop_image1@2x.jpg
+casetop-image2_small: casetop_image2.jpg
+casetop-image2_medium: casetop_image2@2x.jpg
+casetop-image3_small: casetop_image3.jpg
+casetop-image3_medium: casetop_image3@2x.jpg
+
 ingress: |
   Matbaren (“The Food Bar”) supplies grocery stores across Sweden with nifty buffet carts, so customers can assemble their own  to-go meal on the fly. 
   
@@ -29,13 +38,13 @@ image1_alt: "Process"
 section2: |
   One day Matbaren came to us with an idea about placing their buffet carts in gyms and sport facilities. These would be stocked with extra healthy food suited to fitness and nutrition goals. 
 
-They asked us to come up with a brand concept from the ground up, from a name and tagline to a graphic toolkit. And of course, a website and everything on it.
+  They asked us to come up with a brand concept from the ground up, from a name and tagline to a graphic toolkit. And of course, a website and everything on it.
 
 section3: |
   ## Branding, go!
   ### In devising a name, we searched for a single word that would combine the values of both exercise and food. It needed to be memorable and show a kinship with Matbaren’s other concepts.
 
-  We came up with the name Målbaren, which is a play on words in Swedish, as mål means both “meal” and “goal.” The tagline, “för målmedvetna människor” means both “for determined people” and “for food conscious people.” 
+  We came up with the name Målbaren, which is a play on words in Swedish, as mål means both “meal” and “goal. The tagline, “för målmedvetna människor” means both “for determined people” and “for food conscious people.” 
 
 image2_2880: "vagn-concept_2880.jpg"
 image2_1440: "vagn-concept_1440.jpg"
@@ -99,8 +108,7 @@ section10: |
   <span class="custom-button malbaren-button">a button?<span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span><span class="malbaren-button__decoration"></span></span><br>
   I wanted the buttons to have some energy. You’ll notice that they expand with a bit of a reverberating bounce at the end. It’s hardly noticeable but it makes a significant difference. It’s like a little punch.
 
-section11: |
-  Poke around the site to see if you can spot more!  
+  [Poke around](http://malbaren.se) the site to see if you can spot more!  
 
 ---
 

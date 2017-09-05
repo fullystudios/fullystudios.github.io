@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+.follow-frank {
+  width: 100%;
+  position: relative;
+}
+.follow-frank:hover .frank-cheek {
+  -webkit-transform: translate3D(0, 0, 0);
+          transform: translate3D(0, 0, 0);
+}
+.follow-frank .frank-head {
+  width: 100%;
+  height: auto;
+}
+.follow-frank .frank-cheek {
+  position: absolute;
+  top: 49.4%;
+  left: 60%;
+  width: 20%;
+  height: auto;
+  -webkit-transform: translate3D(10%, 10%, 0);
+          transform: translate3D(10%, 10%, 0);
+  -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.24, 1.32, 0.52, -1.73);
+  transition: -webkit-transform 0.1s cubic-bezier(0.24, 1.32, 0.52, -1.73);
+  transition: transform 0.1s cubic-bezier(0.24, 1.32, 0.52, -1.73);
+  transition: transform 0.1s cubic-bezier(0.24, 1.32, 0.52, -1.73), -webkit-transform 0.1s cubic-bezier(0.24, 1.32, 0.52, -1.73);
+}
+.follow-frank .frank-pupil {
+  position: absolute;
+  width: 40%;
+  height: auto;
+}
+.follow-frank .frank-eye-left {
+  top: 38.8%;
+  left: 26%;
+}
+.follow-frank .frank-eye-right {
+  top: 38.8%;
+  left: 60%;
+}
+.follow-frank .frank-eye-left, .follow-frank .frank-eye-right {
+  width: 16.5%;
+  height: 0;
+  padding-bottom: 17%;
+  position: absolute;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+    </style>
+</head>
+<body>
+
+    <div class="follow-frank" id="follow-frank">
+        <img class="frank-head" id="frank-head" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1235293/head-frank.png" alt="Frankenstein" draggable="false">
+        <div class="frank-eye-left" id="frank-eye-left">
+            <img class="frank-pupil" id="frank-pupil-1" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1235293/head-frank-pupil-left.png" alt="Frankenstein" draggable="false">
+        </div>
+        <div class="frank-eye-right" id="frank-eye-right">
+            <img class="frank-pupil" id="frank-pupil-2" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1235293/head-frank-pupil-right.png" alt="Frankenstein" draggable="false">
+        </div>
+        <img class="frank-cheek" id="frank-cheek" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1235293/head-frank-cheek.png" alt="Frankenstein" draggable="false">
+    </div>
+    <script>
+    /**
+     * EyeMover.
+     * @param {object} eyecontainer id - Define the container of the pupils (for the move limit area)
+     * @param {object} eyepupil id - The actual pupil to be moved
+     * @param {int} speed id - The speed that the pupil should be moved
+     */
+    var EyeMover = function(eyecontainer, eyepupil, speed){
+        var mouseX = 0, mouseY = 0, tranX = 0, tranY = 0,
+            ec = document.getElementById(eyecontainer),
+            ep = document.getElementById(eyepupil),
+            limitX = ec.offsetWidth - ep.offsetWidth,
+            limitY = ec.offsetHeight - ep.offsetHeight,
+            offset = ec.getBoundingClientRect();
+
+        window.addEventListener("resize", function() {
+            limitX = ec.offsetWidth - ep.offsetWidth;
+            limitY = ec.offsetHeight - ep.offsetHeight;
+            offset = ec.getBoundingClientRect();
+        });
+        
+        window.addEventListener( 'mousemove', function(e){
+            mouseX = Math.min(e.pageX - offset.left, limitX);
+            mouseY = Math.min(e.pageY - offset.top, limitY);
+            if (mouseX < 0) mouseX = 0;
+            if (mouseY < 0) mouseY = 0;
+        });
+        
+        // Aniamte using requestAnimationFrame
+        function animate() {
+            tranX += (mouseX - tranX) / speed;
+            tranY += (mouseY - tranY) / speed;
+            ep.style.transform = 'translate3D(' + tranX + 'px, ' + tranY + 'px, 0)';
+            
+            window.requestAnimationFrame(animate);
+        }
+        window.requestAnimationFrame(animate);
+    };
+
+    // init eyes
+    var eye1 = new EyeMover("frank-eye-left",  "frank-pupil-1", 12);
+    var eye2 = new EyeMover("frank-eye-right", "frank-pupil-2", 12);  
+    </script>
+</body>
+</html>

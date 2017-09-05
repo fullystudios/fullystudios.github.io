@@ -4,12 +4,14 @@ layout: page
 
 
 {% unless page.section1 == nil %}
-    <section class="gridabout">
-        <div class="boxtext h4">
+    <section class="grid">
+        <div class="grid__column1-2 boxtext h4">
             {{ page.section1 | markdownify }}
         </div>
-        <div class="anim-wrapper">
-            <iframe src="{{ site.baseurl }}/assets/about/experiment.html" width="100%" height="100%" frameborder="0"></iframe>
+        <div class="grid__column2-2 anim-wrapper">
+            <div>
+                <iframe src="{{ site.baseurl }}/assets/about/experiment.html" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
         </div>
     </section>
 {% endunless %}

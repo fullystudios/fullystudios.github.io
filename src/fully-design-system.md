@@ -132,10 +132,10 @@ Standard button:
 
 <div class="c-signal-bg" style="padding: 4em" markdown="1">
 <p>Inverted button:
-<a class="button button--inv" href="#"><span>Explore</span></a>
+<a class="button button--invert" href="#"><span>Explore</span></a>
 </p>
  ``` html
-<a class="button button--inv" href="#"><span>Explore</span></a>
+<a class="button button--invert" href="#"><span>Explore</span></a>
 ```
 </div>
 <br>

@@ -12,7 +12,7 @@ end
 
 desc "Webpack watch"
 task :webpack do
-  `webpack -w`
+  `webpack -w --progress -p`
 end
 
 desc "Run all dev tasks"

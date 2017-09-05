@@ -1,0 +1,12 @@
+.collector-section3__text {
+    position: relative;
+    z-index: 1;
+    margin-top: -#{$s-small*2};
+    width: calc(100% - #{$s-small});
+    max-width: calc( 56em + #{$s-small*2});
+    @include media-query($on-palm) {
+        margin-left: auto;
+        margin-top: -#{$s-small*4};
+        width: calc(100% - #{$s-small * 2});
+    }
+}

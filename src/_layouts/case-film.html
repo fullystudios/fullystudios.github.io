@@ -29,7 +29,7 @@ layout: case
 
 {% unless page.column5050_text == nil %}
     <section class="grid grid--space grid--padding">
-        <div class="grid__column1-2">
+        <div class="grid__column1-2 flexcenter">
             {{ page.column5050_text | markdownify }}
         </div>
         <div class="grid__column2-2">
@@ -48,13 +48,16 @@ layout: case
 	<section class="sectionspacing">
 		{{page.text | markdownify}}
 		
-		{% unless page.author == nil %}
-		<p>
-			<a class="metabutton" href="mailto:{{page.author-email}}">
-				Author: <span>{{page.author}}</span>
-			</a>
-		</p>
-		{% endunless %}
+		{% if page.author != nil and page.author2 != nil %}
+		<p><span class="metabutton">
+			Authors: <span><a href="mailto:{{page.author-email}}" target="_blank">{{page.author}}</a></span> & <span><a href="mailto:{{page.author2-email}}">{{page.author2}}</a></span>
+		</span></p>
+		{% endif %}
+		{% if page.author != nil and page.author2 == nil %}
+		<p><a class="metabutton" href="mailto:{{page.author-email}}">
+			Author: <span>{{page.author}}</span>
+		</a></p>
+		{% endif %}
 		
 	</section>
 {% endunless %}

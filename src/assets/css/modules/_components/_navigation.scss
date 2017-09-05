@@ -23,17 +23,17 @@ $animTime: .3s;
         width: 100%;
         height: 100%;
         z-index: 2;
+        margin-top: 0;
         @media (min-aspect-ratio: 16/9) {
             width: 100%;
             height: auto;
-            transform: translateY(-25%);
+            transform: translateY(-25%); // focus on the stubbe
             top: 25%;
         }
         @media (max-aspect-ratio: 16/9) {
             width: auto;
             height: 100%;
-            transform: translateX(-75%);
-            margin-top: 0;
+            transform: translateX(-75%);  // focus on the stubbe
             left: 75%;
         }
     }
@@ -72,7 +72,7 @@ $animTime: .3s;
             color: $c-white;
         }
         &:hover ~ .wave-svg {
-            stroke-dashoffset: 37;
+            stroke-dashoffset: 37px;
         }
     }
     &__overlay{
@@ -102,17 +102,17 @@ $animTime: .3s;
         stroke-width:7px;
         fill:none;stroke-linecap:round;stroke-linejoin:round;
 
-        stroke-dasharray: 329, 340;
-        stroke-dashoffset: 329; // max 329
+        stroke-dasharray: 329px, 340px;
+        stroke-dashoffset: 330px; // max 320 - px is needed in Edge
         transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 0, 0.1, 0.99);
         pointer-events: none;
     }
     .menu-work ~ .wave-svg { stroke: lighten($c-signal, 10%); }
-    .menu-work:hover ~ .wave-svg { stroke-dashoffset: 182; }
+    .menu-work:hover ~ .wave-svg { stroke-dashoffset: 182px; }
     .menu-about ~ .wave-svg { stroke: $c-business; }
-    .menu-about:hover ~ .wave-svg { stroke-dashoffset: 148; }
+    .menu-about:hover ~ .wave-svg { stroke-dashoffset: 148px; }
     .menu-curiosities ~ .wave-svg { stroke: $c-curiosities; }
-    .menu-contact:hover ~ .wave-svg { stroke-dashoffset: 108; }
+    .menu-contact:hover ~ .wave-svg { stroke-dashoffset: 108px; }
 
     &.menu-open {
         z-index: 15;

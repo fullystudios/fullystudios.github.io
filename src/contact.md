@@ -38,13 +38,12 @@ employees:
     image: employees/alexander-tengner.jpg
     title: UX & Design Director
     email: alexander.tengner@fullystudios.se
-    tel: +46 739 58 86 73
+    tel: +46 721 71 50 32
 
   - name: Martina Milisic
     image: employees/martina-milisic.jpg
     title: Full Stack Developer
     email: martina.milisic@fullystudios.se
-    tel: +46 722 32 02 66
 
   - name: Mikael Biström
     image: employees/mikael-bistrom.jpg
@@ -56,7 +55,6 @@ employees:
     image: employees/jonas-sandstedt.jpg
     title: Designer & Front-end Developer
     email: jonas.sandstedt@fullystudios.se
-    tel: +46 739 37 73 92
 
 ---
 

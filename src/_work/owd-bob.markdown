@@ -18,6 +18,15 @@ background-image_1440: "hero.jpg"
 background-image_720: "hero_720.jpg"
 background-image_color: "#c9cba3"
 
+casetop-bg_640: casetop_bg.jpg
+casetop-bg_1440: casetop_bg@2x.jpg
+casetop-image1_small: casetop_image1.jpg
+casetop-image1_medium: casetop_image1@2x.jpg
+casetop-image2_small: casetop_image2.jpg
+casetop-image2_medium: casetop_image2@2x.jpg
+casetop-image3_small: casetop_image3.jpg
+casetop-image3_medium: casetop_image3@2x.jpg
+
 ingress: |
   Given that Fully is a digital studio, the majority of our creations live, move and die on the Internet. 
   

@@ -30,7 +30,8 @@ layout: case
                 src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ image.small }}" 
                 srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ image.medium }} 1440w,
                         {{site.baseurl}}/assets/work/{{page.slug}}/{{ image.small }} 720w"
-                sizes="100vw">
+                sizes="(min-width: 580px) 33vw,
+                100vw">
         </div>
         {% endfor %}
     </section>

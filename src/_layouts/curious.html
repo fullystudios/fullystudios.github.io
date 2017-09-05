@@ -47,9 +47,6 @@ layout: default
 		{% unless page.ingress == nil %}
 		<div class="c-white-bg">
 			<div class="metabox metabox--wide metabox--offset column__wrapper center">
-				{% unless page.subtitle == nil %}
-				<h2 class="h3">{{ page.subtitle }}</h2>
-				{% endunless %}
 				<h4>
 					{{ page.ingress | markdownify }}
 				</h4>
@@ -73,7 +70,7 @@ layout: default
 		{% endif %}
 		<a class="boxgrid__box" href="{{ curious.url | prepend: site.baseurl }}">
 			
-				<div class="image-loader"{% unless curious.background-image_color == nil %} style="background-color: {{ curious.background-image_color }}" {% endunless %}>
+				<div class="boxgrid__image" {% unless curious.background-image_color == nil %} style="background-color: {{ curious.background-image_color }}" {% endunless %}>
 				{% unless curious.background-image_720 == nil %}
 					<img src="{{site.baseurl}}/assets/curious-about/{{curious.slug}}/{{curious.background-image_720}}" alt="{{ curious.title }}">	
 				{% endunless %}

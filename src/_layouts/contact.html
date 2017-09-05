@@ -15,13 +15,13 @@ layout: page
 
     {% for employee in page.employees %}
         <figure class="boxgrid__box">
-            <div class="image-loader" style="background: #c1c1c1"> <!--Change this color to an average color from the image-->
+            <div class="boxgrid__image image-loader" style="background: #c1c1c1"> <!--Change this color to an average color from the image-->
                 <img src="/assets/{{ employee.image }}" alt="{{ employee.name }}">	
             </div>
             <figcaption class="boxgrid__caption">
                 <h3>{{ employee.name }}</h3>
                 <p>{{ employee.title }}</p>
-                <p>Drop me a line at <a class="hyphenate" href="mailto:{{employee.email}}">{{employee.email}}</a> or give me a call on <a href="tel:{{employee.tel}}">{{employee.tel}}</a></p> 
+                <p>{% unless employee.email == nil %}<a class="hyphenate" href="mailto:{{employee.email}}">{{employee.email}}</a>{% endunless %}{% unless employee.tel == nil %}<br><a href="tel:{{employee.tel}}">{{employee.tel}}</a>{% endunless %}</p> 
             </figcaption>
         </figure>
     {% endfor %}

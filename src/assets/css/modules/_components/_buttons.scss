@@ -76,7 +76,7 @@ $bshadow: 3px; // the size of the shadow
 	}
 
 	// Inverted button (when on signal bg)
-	&--inv {
+	&--invert {
 		span {
 			border-color: $c-white;
 			background-color: $c-signal;
@@ -115,7 +115,6 @@ $bshadow: 3px; // the size of the shadow
 			z-index: 2;
 		}
 		svg {
-			display: none;
 			margin: 0;
 			width: 3em;
 			height: 3em;
@@ -245,11 +244,15 @@ $bshadow: 3px; // the size of the shadow
 	font-size: 0.8em;
 	font-weight: 300;
 	transition: color 0.2s, border 0.2s;
+	&a, &:visited {
+		color: #ccc;
+	}
 	&:hover {
 		border: 2px solid $c-signal;
 		span:after {
 			transform: scaleX(1);
 		}
+		&:visited, a {color: $c-signal};
 	}
 	span {
 		position: relative;
@@ -268,6 +271,7 @@ $bshadow: 3px; // the size of the shadow
 			transition: transform .7s $easeout;
 		}
 	}
+	a {color: inherit;}
 }
 
 .button + .link {

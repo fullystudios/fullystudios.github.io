@@ -1,0 +1,12 @@
+.malbaren-toptriangle {
+    transform: translateY(0.5px); // antiallising fix
+}
+.malbaren-bottomtriangle {
+    transform: translateY(-0.5px); // antiallising fix
+    margin-bottom: $s-small;
+}
+
+.malbaren-skewbox {
+    width:100%;
+    padding: 40px 0 60px
+}

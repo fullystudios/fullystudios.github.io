@@ -19,6 +19,8 @@
     max-width: $content-width;
     width: calc(100% - #{$s-small});
     @include media-query($on-palm) {
+        --boxShadowX: #{$s-small};
+        --boxShadowY: #{$s-small};
         margin-left: $s-small;
         margin-bottom: $s-small;
         width: calc(100% - #{$s-small * 2});
@@ -37,8 +39,6 @@
         }
         @include media-query($on-palm) {
             transform: translate($s-small, $s-small);
-            --boxShadowX: #{$s-small};
-            --boxShadowY: #{$s-small};
         }
     }
 
@@ -46,24 +46,26 @@
     &--right{
         margin-left: auto;
         margin-right: $s-small*0.5;
+        --boxShadowX: -#{$s-small*0.5};
+        --boxShadowY: #{$s-small*0.5};
         &:before { 
             transform: translate(-$s-small*0.5, $s-small*0.5);
-            --boxShadowX: -#{$s-small*0.5};
-            --boxShadowY: #{$s-small*0.5};
         }
         @include media-query($on-palm) {
             margin-left: auto;
             margin-right: $s-small;
+            --boxShadowX: -#{$s-small};
+            --boxShadowY: #{$s-small};
             &:before { 
                 transform: translate(-$s-small, $s-small);
-                --boxShadowX: -#{$s-small};
-                --boxShadowY: #{$s-small};
             }
         }
     }
 
     // transform the shadow upwards instead
     &--up {
+        --boxShadowX: #{$s-small*0.5};
+        --boxShadowY: -#{$s-small*0.5};
         &.box--right {
             margin-right: $s-small;
             @include media-query($on-palm) {
@@ -72,14 +74,12 @@
         }
         &:before { 
             transform: translate($s-small*0.5, -$s-small*0.5);
-            --boxShadowX: #{$s-small*0.5};
-            --boxShadowY: -#{$s-small*0.5};
         }
         @include media-query($on-palm) {
+            --boxShadowX: #{$s-small};
+            --boxShadowY: -#{$s-small};
             &:before { 
                 transform: translate($s-small, -$s-small);
-                --boxShadowX: #{$s-small};
-                --boxShadowY: -#{$s-small};
             }
         }
     }
@@ -122,6 +122,9 @@
     &--bgbusiness   { background: $c-business };
     &--bgmetal      { background: $c-metal };
 
+    ul {
+        font-weight: normal;
+    }
 }
 
 @keyframes flying {

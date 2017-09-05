@@ -59,11 +59,16 @@ layout: default
 		<div class="ingress__content">
 			{{ page.ingress | markdownify }}
 
-			{% unless page.author == nil %}
-			<p><a class="metabutton" href="mailto:{{page.author-email}}">
+			{% if page.author != nil and page.author2 != nil %}
+			<p class="button__wrap"><span class="metabutton">
+				Authors: <span><a href="mailto:{{page.author-email}}" target="_blank">{{page.author}}</a></span> & <span><a href="mailto:{{page.author2-email}}">{{page.author2}}</a></span>
+			</span></p>
+			{% endif %}
+			{% if page.author != nil and page.author2 == nil %}
+			<p class="button__wrap"><a class="metabutton" href="mailto:{{page.author-email}}">
 				Author: <span>{{page.author}}</span>
 			</a></p>
-			{% endunless %}
+			{% endif %}
 		</div>
 		{% unless page.casetop-bg_1440 == nil %}
 			<style>
@@ -77,12 +82,40 @@ layout: default
 				}
 			</style>
 		{% endunless %}
-		<div data-scroll class="ingress__image background-image{% unless page.casetop-bg_1440 == nil %} background-image{% endunless %}" id="casetop_{{ page.slug }}" {% unless page.background-image_color == nil %} style="background-color: {{page.background-image_color}}"{% endunless %}>
+		<div data-scroll class="{% unless page.casetop-video == nil %}ingress__videowrapper{% else %}ingress__images{% endunless %} background-image{% unless page.casetop-bg_1440 == nil %} background-image{% endunless %}" id="casetop_{{ page.slug }}" {% unless page.casetop-bgcolor == nil %} style="background-color: {{page.casetop-bgcolor}}"{% endunless %}>
 			{% unless page.casetop-video == nil %}
 			<video class="ingress__video" loop autoplay muted playsinline>
 				<source src="{{ site.baseurl }}/assets/work/{{page.slug}}/{{ page.casetop-video }}">
 			</video>
+			{% endunless %}
+			{% unless page.casetop-image1_medium == nil %}
+				<img class="image ingress__image ingress__image--1"
+					alt="{{page.casetop-image1_alt}}"
+					width="816" height="505"
+					src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.casetop-image1_small }}" 
+					srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.casetop-image1_medium }} 1440w,
+							{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.casetop-image1_small }} 720w"
+					sizes="(min-width: 580px) 10vw,
+                        	75vw">
 
+				<img class="image ingress__image ingress__image--2"
+					alt="{{page.casetop-image2_alt}}"
+					width="816" height="505"
+					src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.casetop-image2_small }}" 
+					srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.casetop-image2_medium }} 1440w,
+							{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.casetop-image2_small }} 720w"
+					sizes="(min-width: 580px) 10vw,
+                        	75vw">
+
+				<img class="image ingress__image ingress__image--3"
+					alt="{{page.casetop-image3_alt}}"
+					width="816" height="505"
+					src="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.casetop-image3_small }}" 
+					srcset="{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.casetop-image3_medium }} 1440w,
+							{{site.baseurl}}/assets/work/{{page.slug}}/{{ page.casetop-image3_small }} 720w"
+					sizes="(min-width: 580px) 10vw,
+                        	75vw">
+				
 			{% endunless %}
 
 			{% unless page.link == nil %}

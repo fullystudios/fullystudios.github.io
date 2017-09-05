@@ -27,7 +27,7 @@
     "bodymovin": "^4.7.0",
     "eslint": "^4.0.0",
     "eslint-loader": "^1.8.0",
-    "lory.js": "^2.2.1",
+    "lory.js": "^2.3.3",
     "react": "^15.0.2",
     "react-addons-update": "^15.0.2",
     "react-dom": "^15.0.2",

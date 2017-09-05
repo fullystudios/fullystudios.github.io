@@ -14,11 +14,13 @@
 		{% endif %}
 
         <div class="boxgrid__box">
-            <div class="image-loader" style="background-color: {{work.background-color}}"> <!--Change this color to an average color from the image-->
+            
+            <div class="boxgrid__image" style="background-color: {{work.background-color}}"> <!--Change this color to an average color from the image-->
                 {% unless work.background-image_720 == nil %}
                     <img src="{{site.baseurl}}/assets/work/{{work.slug}}/{{work.background-image_720}}" alt="{{work.title}}">	
                 {% endunless %}
             </div>
+        
             <div class="boxgrid__caption">
                 <div>
                     <h3>{{work.title}}</h3>

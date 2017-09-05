@@ -64,18 +64,12 @@ layout: curious
 </div>
 {% endunless %}
 
-
 {% unless page.section3 == nil %}
 <div class="section section--3 sectionspacing-small">
-    <div class="box box--right box--business">
+    <div class="box box--right box--business box--up">
         {{ page.section3 | markdownify }}
     </div>
-</div>
-{% endunless %}
-
-{% unless page.section4 == nil %}
-<div class="section section--4 sectionspacing-small">
-    <div class="imagegrid" data-coeswipe>
+    <div class="imagegrid" data-coeswipe style="margin-top: -4em; margin-right: 10vw">
         <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile" data-coeswipeimage>
             <div class="coe-swipe coe-swipe--1" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{page.section4-image1}}"></div>
         </div>
@@ -87,11 +81,6 @@ layout: curious
         </div>
         <div class="imagegrid__image imagegrid__image--four imagegrid__image--twomobile" data-coeswipeimage>
             <div class="coe-swipe coe-swipe--4" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{page.section4-image4}}"></div>
-        </div>
-    </div>
-    <div style="margin-top: -5em; position: relative; z-index: 1; margin-left: 5%">
-        <div class="box box--people" style="max-width: 33em;">
-            {{ page.section4 | markdownify }}
         </div>
     </div>
 </div>
@@ -146,28 +135,34 @@ layout: curious
 {% unless page.section8 == nil %}
 <div class="section section--8">
     {{ page.section8 | markdownify }}
+    {% unless page.cta == nil %}
     <p>
         <a href="{{site.baseurl}}/contact" class="button"><span>{{page.cta}}</span></a>
     </p>
+    {% endunless %}
 </div>
 {% endunless %}
-
 
 {% unless page.section7 == nil %}
 <div class="section section--7 sectionspacing-small grid grid--space">
     {% unless page.section7-image_2880 == nil %}
         <style>
             .section7-{{ page.slug }} {
-                background-image: url({{site.baseurl}}/assets/work/{{work1.slug}}/{{ page.section7-image_1440 }});
+                background-image: url({{site.baseurl}}/assets/curious-about/{{page.slug}}/{{ page.section7-image_720 }});
             }
-            @media (min-width: 1600px), (min-width: 1200px) and (min-resolution: 2dppx) {
+            @media (min-width: 540px) {
                 .section7-{{ page.slug }} {
-                    background-image: url({{site.baseurl}}/assets/work/{{work1.slug}}/{{ page.section7-image_2880 }});
+                    background-image: url({{site.baseurl}}/assets/curious-about/{{page.slug}}/{{ page.section7-image_1440 }});
+                }
+            }
+            @media (min-width: 1600px), (min-width: 1000px) and (min-resolution: 2dppx) {
+                .section7-{{ page.slug }} {
+                    background-image: url({{site.baseurl}}/assets/curious-about/{{page.slug}}/{{ page.section7-image_2880 }});
                 }
             }
         </style>
     {% endunless %}
-    <div class="background-image grid__offsetcolumn1-2 section7-{{ page.slug }}" style="background-image: url({{ site.baseurl }}/assets/curious-about/{{page.slug}}/{{ page.background-image_2880 }})"></div>
+    <div class="background-image grid__offsetcolumn1-2 section7-{{ page.slug }}"></div>
     <div class="grid__offsetcolumn2-2 bring-to-front">
         <div class="box box--right box--up">
             {{ page.section7 | markdownify }}

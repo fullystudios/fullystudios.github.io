@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign items = (site.curious-about | sort: 'date') | reverse %}
+{% assign items = site.curious-about | sort: 'date' | reverse %}
 {% assign root = 'js/' %}
     
 {% for curiosity in items limit:1 %}
@@ -77,7 +77,7 @@ layout: default
             {{ curiosity.background }}
         {% endunless %}
     </div>
-    <header class="boxtext boxtext--texttop center hyphenate">
+    <header class="boxtext boxtext--texttop center hyphenate bring-to-front">
         <p class="c-dark boxtext__texttop">Constant Curiosity</p>
         <div>
         {% if curiosity.pagetitle != nil %}
@@ -100,38 +100,8 @@ layout: default
 
 
 <section class="sectionspacing">
-    <div class="boxtext boxtext--frame boxtext--frame--darkoncuriosity center">
+    <div class="boxtext boxtext--frame boxtext--frame--darkoncuriosity center bring-to-front">
         <h3>We host meetups on occation.<br>Join us some time!</h3>
         <a href="https://www.meetup.com/Goteborg-Laravel-Meetup-Fully-Studios/" class="button button--curiosities"><span>Fully meetups</span></a>
     </div>
-</section>
-
-<!-- 
-####################
-## Loop through the latest curiosities
--->
-<section class="boxgrid boxgrid--compact">
-    <h2 class="boxgrid__header h4 invert">All curiosities</h2>
-    <!-- Get all curiositie posts -->
-    {% assign items = site.curious-about | sort: 'date' %}
-    {% assign root = 'js/' %}
-    
-    {% for curiosity in items %}
-        <div class="boxgrid__box">
-            <div class="image-loader"{% unless curiosity.background-image_color == nil %} style="background-color: {{ curiosity.background-image_color }}" {% endunless %}> <!--Change this color to an average color from the image-->
-                {% unless curiosity.background-image_720 == nil %}
-                    <img src="{{site.baseurl}}/assets/curious-about/{{curiosity.slug}}/{{curiosity.background-image_720}}" alt="{{curiosity.title}}">	
-                {% endunless %}
-            </div>
-            <figcaption class="boxgrid__caption">
-                <div>
-                    <h3>{{curiosity.title}}</h3>
-                    <p>{{curiosity.subtitle}}</p>
-                </div>
-                <a href="{{curiosity.url | prepend: site.url }}" class="button"><span>{{curiosity.button-text}}</span></a>
-            </figcaption>
-        </div>
-        
-    {% endfor %}
-
 </section>

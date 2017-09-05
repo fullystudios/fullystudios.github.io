@@ -1,8 +1,10 @@
+$grh: 5vh;
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: minmax(5vh, auto); // 20 rows per vp
-    grid-auto-rows: minmax(5vh, auto);
+    //grid-template-rows: repeat(10, 1fr); // IE 11 / Edge fallback
+    grid-template-rows: minmax($grh, auto); // 20 rows per vp
+    grid-auto-rows: minmax($grh, auto);
     // min-height: 100vh;
     &--space {
         margin-top: $s-small*2;
@@ -20,7 +22,7 @@
     // 2 column grid component. Example: Case Owd Bob
     &__column1-2 {
         margin-bottom: $s-small;
-        grid-column: 1 / -1;
+        grid-column: 1 / span 12;
         grid-row: 1;
         @include media-query($on-laptop) {
             justify-self: center;
@@ -29,7 +31,7 @@
     }
     &__column2-2 {
         margin-bottom: $s-small;
-        grid-column: 1 / -1;        
+        grid-column: 1 / span 12;        
         grid-row: 2;
         justify-self: center;
         @include media-query($on-laptop) {
@@ -41,7 +43,7 @@
     // 2 column grid component. Example: Case internet by hand
     &__column-large {
         margin-bottom: $s-small;
-        grid-column: 1 / -1;
+        grid-column: 1 / span 12;
         grid-row: 1;
         justify-self: center;
         @include media-query($on-laptop) {
@@ -50,7 +52,7 @@
     }
     &__column-small {
         margin-bottom: $s-small;
-        grid-column: 1 / -1;        
+        grid-column: 1 / span 12;        
         grid-row: 2;
         justify-self: center;
         @include media-query($on-laptop) {
@@ -61,49 +63,57 @@
 
     // 2 column offset component. Example: Landing Case
     &__offsetcolumn1-2 {
-        grid-column: 2 / -1;
+        grid-column: 2 / span 12;
         grid-row: 1 / span 7;
         @include media-query($on-laptop) {
             grid-column: 1 / span 8;
             grid-row: 2 / span 13;
+            min-height: (13*$grh); // IE Edge fix
         }
         &--small {
-            grid-column: 1 / -1;
+            grid-column: 1 / span 12;
             grid-row: 4 / span 8;        
             @include media-query($on-laptop) {
                 grid-column: 1 / span 8;
                 grid-row: 2 / span 8;
+                min-height: (8*$grh); // IE Edge fix
             }
         }
     }
     &__offsetcolumn2-2 {
-        grid-column: 1 / -1;
+        grid-column: 1 / span 12;
         grid-row: 8 / span 1;
         @include media-query($on-laptop) {
             grid-column: 8 / span 5;
             grid-row: 1 / span 8;
+            min-height: (8*$grh); // IE Edge fix
         }
         
         &--owd-bob {
             grid-row: 11 / span 7;
             @include media-query($on-laptop) {
                 grid-row: 3 / span 8;
+                min-height: (8*$grh); // IE Edge fix
             }
         }
     }
 
     // Fullwidth image with box underneath
     &__fullwidth {
-        grid-column: 1 / -1;
+        grid-column: 1 / span 12;
         grid-row: 1 / span 10; 
+        min-height: (10*$grh); // IE Edge fix
     }
 
     &__boxunder {
-        grid-column: 2 / span 10;
+        grid-column: 1 / span 12;
+        margin-left: 10px;
+        margin-right: 10px;
         grid-row: 7 / span 4; 
         @include media-query($on-laptop) {
             grid-column: 2 / span 10;
             grid-row: 7 / span 8;
+            min-height: (8*$grh); // IE Edge fix
         }
     }
     
@@ -141,57 +151,65 @@
 
 
 // About layout
-.gridabout {
-    display: grid;
-    grid-template-columns: 1fr;
-    @include media-query($on-laptop) {
-        grid-template-columns: 1fr 1fr;
-    }
+.page--about {
     .anim-wrapper {
-        height: auto;
-        padding-top: 60%;
-        position: relative;
+        // height: auto;
+        // padding-top: 60%;
+        // position: relative;
         iframe {
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
+            width: 100vw; // iOS safari fix - dont understand 100% on an iframe
+            height: 100%;
+            min-height: 15em;
+            overflow: hidden;
+            @include media-query($on-laptop) {
+                width: 100%;
+            }
+            // position: absolute;
+            // top: 0; right: 0; bottom: 0; left: 0;
         }
     }
 }
 
 // Work layout
-.boxtext--simpleframe.work-ingress {
-    z-index: 4;
-    grid-column: 1 / -1;
-    grid-row: 1 / span 4;
-    @include media-query($on-laptop) {
-        grid-column: 1 / span 5;
-        grid-row: 1 / span 6;
-    }
-}
+// .boxtext--simpleframe.work-ingress {
+//     z-index: 4;
+//     grid-column: 1 / span 12;
+//     grid-row: 1 / span 4;
+//     @include media-query($on-laptop) {
+//         grid-column: 1 / span 5;
+//         grid-row: 1 / span 6;
+//     }
+// }
 .work1-image {
-    grid-column: 1 / -1;
-    grid-row: 9 / span 11;
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 8;
     @include media-query($on-laptop) {
         grid-column: 1 / span 8;
-        grid-row: 7 / span 15;
+        grid-row: 3 / span 15;
+        min-height: (15*$grh); // IE Edge fix
     }
 }
 .work1-text {
-    grid-column: 1 / -1;
-    grid-row: 5 / span 4;
+    grid-column: 1 / span 12;
+    grid-row: 9 / span 4;
     z-index: 1;
     @include media-query($on-laptop) {
         grid-column: 8 / span 5;
-        grid-row: 5 / span 10;
+        grid-row: 1 / span 10;
+        min-height: (10*$grh); // IE Edge fix
     }
 }
 
 .reelgrid {
+    display: flex;    
+    flex-flow: column-reverse;
+
     // SAVE to when we add a video player that can hide the text field
     // margin-top: $s-small*2;
+    
     @include media-query($on-laptop) {
+        display: block;
         position: relative;
-        padding-top: $s-small*2;
         margin-top: $s-small*4;
         &__text {
             // SAVE to when we add a video player that can hide the text field
@@ -200,52 +218,53 @@
             // left: 0;
             width: 50%;
             z-index: 1;
+            min-height: none;
         }
         &__video {
             padding-bottom: 56.05%;
+            min-height: none;
         }
     }
 }
 
 .work2-image {
-    grid-column: 1 / -1;
-    grid-row: 3 / span 10;
+    grid-column: 1 / span 12;
+    grid-row: 2 / span 8;
     @include media-query($on-laptop) {
-        grid-column: 1 / 8;
-        grid-row: 5 / 17;
+        grid-column: 1 / span 7;
+        grid-row: 5 / span 12;
+        min-height: (12*$grh); // IE Edge fix
     }
 }
 
 .work2-text {
-    margin-top: $s-small*2;
-    grid-column: 1 / -1;
-    grid-row: 1 / span 2;
+    grid-column: 1 / span 12;
+    grid-row: 9 / span 2;
     z-index: 1;
     @include media-query($on-laptop) {
-        margin-top: 0;
-        // margin-right: $s-small;
-        grid-column: 8 / -1;
+        grid-column: 8 / span 4;
         grid-row: 1 / span 20;
+        min-height: (20*$grh); // IE Edge fix
     }
 }
 
 .work3-image {
-    grid-column: 1 / -1;
-    grid-row: 3 / span 15;
+    grid-column: 1 / span 12;
+    grid-row: 2 / span 15;
     @include media-query($on-laptop) {
         grid-row: 1 / span 18;
+        min-height: (18*$grh); // IE Edge fix
     }
 }
 
 .work3-text {
-    margin-top: $s-small*2;
-    grid-column: 1 / -1;
-    grid-row: 1 / span 2;
+    grid-column: 1 / span 12;
+    grid-row: 16 / span 2;
     z-index: 1;
     @include media-query($on-laptop) {
-        margin-top: 0;
         grid-column: 2 / span 5;
         grid-row: 14 / span 7;
+        min-height: (7*$grh); // IE Edge fix
     }
 }
 
@@ -255,39 +274,43 @@
         position: relative;
     }
     .bgimage:nth-of-type(1) {
-        grid-column: 1 / -1;
-        grid-row: 3 / span 10;
+        grid-column: 1 / span 12;
+        grid-row: 1 / span 8;
         @include media-query($on-laptop) {
             grid-row: 1 / span 17;
+            min-height: (17*$grh); // IE Edge fix
         }
     }
 
     .boxtext:nth-of-type(1) {
         z-index: 1;
-        grid-column: 1 / -1;
-        grid-row: 3 / span 10;
+        grid-column: 1 / span 12;
+        grid-row: 9 / span 10;
         @include media-query($on-laptop) {
             grid-column: 2 / span 5;
             grid-row: 14 / span 7;
+            min-height: (7*$grh); // IE Edge fix
         }
     }
 
     .bgimage:nth-of-type(2) {
-        grid-column: 1 / -1;
-        grid-row: 3 / span 10;
+        grid-column: 1 / span 12;
+        grid-row: 21 / span 8;
         @include media-query($on-laptop) {
             grid-column: 1 / span 8;
             grid-row: 22 / span 17;
+            min-height: (17*$grh); // IE Edge fix
         }
     }
 
     .boxtext:nth-of-type(2) {
         z-index: 1;
-        grid-column: 1 / -1;
-        grid-row: 3 / span 10;
+        grid-column: 1 / span 12;
+        grid-row: 29 / span 10;
         @include media-query($on-laptop) {
             grid-column: 8 / span 5;
             grid-row: 20 / span 10;
+            min-height: (10*$grh); // IE Edge fix
         }
     }
 
@@ -353,12 +376,12 @@
 
 .imageline {
     background-color: $c-dark;
-    display: flex;
-    flex-wrap: wrap;
     overflow: auto;
     max-width: 1300px;
     padding: $s-small*0.5;
     @include media-query($on-palm) {
+        display: flex;
+        flex-wrap: wrap;
         padding: $s-small;
     }
 

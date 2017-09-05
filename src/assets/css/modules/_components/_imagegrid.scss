@@ -1,9 +1,9 @@
 // Image grid
 .imagegrid {
     margin: $s-small*0.5;
-    display: flex;
-    flex-flow: row wrap;
     @include media-query($on-palm) {
+        display: flex;
+        flex-flow: row wrap;
         margin: $s-small*0.75;
     }
     .imagegrid__image {

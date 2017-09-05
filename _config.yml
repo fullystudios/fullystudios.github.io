@@ -2,7 +2,7 @@
 title: Fully Studios
 email: hello@fullystudios.se
 tel: "+46 738 07 30 72"
-description: Fully Studios is a Swedish web and film studio specializing in motion on the web.
+description: Fully Studios is a Swedish web and film studio, specializing in motion on the web.
 adress: Victoriapassagen,<br>Södra Larmgatan 14,<br>411 16 Göteborg
 baseurl: "" # the subpath of your site, e.g. /blog
 # baseurl: "/fullystudios" # for demo site on demo.fullyflared.se/fullystudios
@@ -20,7 +20,7 @@ newsflash: |
   We got a new name, a new logo and a new way of announcing news flashes.
 
 # newsflash_buttontext: Check it out
-newsflash_buttonurl: /work#reel
+newsflash_buttonurl: /about
 
 # Papricaklubben
 case_highlight1_id: 5
@@ -32,7 +32,7 @@ case_highlight2_id: 1
 case_highlight3_id: 2
 
 # Links
-works: "/works"
+works: "/work"
 about: "/about"
 
 # Custom post types 

@@ -91,9 +91,9 @@ section7: |
 
   This one print might not be to everyone’s liking, but that is the essence of opinionated design. We wanted to see how such an opinionated choice would play out, in an era where Quantity ostensibly reigns supreme. 
 
-section7-image_720: "hero_720.jpg"
-section7-image_1440: "hero.jpg"
-section7-image_2880: "hero@2x.jpg"
+section7-image_720: "owd_bob_store_720.jpg"
+section7-image_1440: "owd_bob_store.jpg"
+section7-image_2880: "owd_bob_store@2x.jpg"
 section7-image_color: "#eaeaea"
 
 header-scripts: <script src='https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.1/vivus.min.js'></script>

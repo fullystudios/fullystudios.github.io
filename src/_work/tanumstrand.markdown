@@ -11,9 +11,13 @@ project: Film production
 background-image_2880: "hero@2x.jpg"
 background-image_1440: "hero.jpg"
 background-image_720: "hero_720.jpg"
-background-image_color: "#7e93b0"
+background-image_color: "#5E84C3"
 author: Joakim Hanner
 author-email: joakim.hanner@fullystudios.se
+
+casetop-bg_640: casetop_bg.jpg
+casetop-bg_1440: casetop_bg@2x.jpg
+casetop-video: casetop.mp4
 
 ingress: |
   TanumStrand is a hotel and retreat center on Sweden’s west coast, close-ish to the Norwegian border. With its granite archipelagos, misty mornings and gently rocking rowboats, it’s an idyll that would make any Swedish ex-pat weep. 

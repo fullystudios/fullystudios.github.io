@@ -6,12 +6,17 @@
         flex-wrap: wrap;
     }
     
-    p {
+    p:not(.button__wrap) {
         @extend .h5;
+        @include media-query($on-desktop) {
+            font-size: 1.5em;
+            max-width: calc( 37.35em + #{$spacing-unit*2});
+        }
     }
     
     &__content {
         padding: 0 0 $s-small;
+        align-self: center;
         @include media-query($on-laptop) {
             padding: $s-small*0.5 $s-small $s-small;
             flex: 1 0 60%;
@@ -21,15 +26,75 @@
             padding: $s-small $s-small*2 $s-small*2;
         }        
     }
-    &__image {
-        height: auto;
-        padding: $s-small; // 36.5% in total when the image container is 40%
+    &__images {
+        height: 0;
+        padding-top: 100vw; // make it a square
         position: relative;
         text-align: center;
-        perspective: 2000px;
+        @include media-query($on-laptop) {
+            padding-top: 36.5vw; // 36.5% in total when the image container is 40% - set to vw so MS Edge understands what we mean
+            flex: 1 0 40%;
+            max-width: 40%;
+        }
+    }
+    &__videowrapper {
+        height: auto;
+        padding: $s-small;
+        position: relative;
+        text-align: center;
         @include media-query($on-laptop) {
             flex: 1 0 40%;
             max-width: 40%;
+        }
+    }
+    &__images, &__videowrapper {
+        
+        &.invisible {
+            .ingress__video, .ingress__image {
+                transform: translateY(100px) rotateZ(10deg);
+            }
+        }
+        &.visible {
+            .ingress__video, .ingress__image {
+                transform: translateY(0) rotateZ(0);
+            }
+        }
+        &:hover {
+            .ingress__video {
+                transform: translateY(20px) rotateZ(2deg);
+            }
+        }
+        .ingress__button {
+            position: absolute;
+            bottom: 3%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+    }
+    &__image {
+        position: absolute;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        &--1 {
+            top: 5%;
+            left: 5%;
+            width: 55%;
+            transition: transform 0.8s $easeout;
+        }
+        &--2 {
+            top: 32%;
+            left: 10%;
+            width: 55%;
+            transition: transform 0.9s $easeout;
+        }
+        &--3 {
+            top: 17%;
+            left: 57%;
+            width: 32%;
+            transition: transform 1s $easeout;
+        }
+        &:hover {
+            transform: translateY(5px) scale(1.05) rotateZ(2deg) !important;
         }
     }
     &__video {
@@ -37,23 +102,6 @@
         height: auto;
         box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         transition: transform 1s $easeout;
-    }
-    &__image {
-        &.invisible {
-            .ingress__video {
-                transform: translateY(100px) rotate3d(1, -1, 1, 10deg);
-            }
-        }
-        &.visible {
-            .ingress__video {
-                transform: translateY(0) rotate3d(1, -1, 1, 0);
-            }
-        }
-        &:hover {
-            .ingress__video {
-                transform: translateY(20px) rotate3d(1, -1, 1, 2deg);
-            }
-        }
     }
 }
 // p.ingress {

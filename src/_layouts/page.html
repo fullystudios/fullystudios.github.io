@@ -19,15 +19,20 @@ layout: default
 	{% endunless %}
 	<div class="hero hero--{{ page.slug }}{% unless page.background-image_2880 == nil %} background-image{% endunless %} {{page.bg-color}}" id="work_{{ page.slug }}">
 		<header class="hero__header hyphenate">
+			<div class="hero__header-wrap">
 			{% if page.pagetitle != nil %}
 				{{ page.pagetitle | markdownify }}
 			{% else %}
-			<h1 class="hero__header-element" itemprop="name headline">
-				{{ page.title }}
-			</h1>
-			{% endif %}
-			{% unless page.subtitl == nil %}
-				<h2>{{page.subtitle}}</h2>
+				<h1 class="hero__header-element" itemprop="name headline">
+					{{ page.title }}
+				</h1>
+				{% endif %}
+				{% unless page.subtitle == nil %}
+					<h2>{{page.subtitle}}</h2>
+				{% endunless %}
+			</div>
+			{% unless page.sublink == nil %}
+				<h4><a href="{{page.sublink}}">{{page.sublink-text}}</a></h4>
 			{% endunless %}
 		</header>
 
