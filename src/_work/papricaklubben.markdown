@@ -18,10 +18,9 @@ background-image_720: "hero_720.jpg"
 background-image_color: "#80b568"
 
 ingress: |
-  ICA, the largest retailer in the Nordics and essentially shorthand for “grocery store” in Swedish, has always had a strong health focus.
+  Recently ICA Kvantum has been increasing its efforts in the education space, trying to get kids to care about fresh-grown foods. And in particular, to know more about the concept of eating fruits and vegetables according to the season. 
 
 section1: |
-  Recently their subsidiary, ICA Kvantum, has been increasing its efforts in the education space, trying to get kids to care about fresh-grown foods. And in particular, to know more about the concept of eating fruits and vegetables according to the season. 
 
   To get their message across in a jolly and captivating way, ICA Kvantum created Papricaklubben, a members club for children. The club mascots are three wide-eyed bell peppers: **Grönis**, **Gulis** and **Rödis**.
 
