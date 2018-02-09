@@ -66,7 +66,7 @@ Error: ```jekyll 3.5.0 | Error:  undefined method `registers' for nil:NilClass``
 
 
 ## Tips and tricks
-* Breake browser cache: simple add this string appending to a file url: `?{{site.time | date: '%s%N'}}` eg `<script src="{{ boundle_src | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>`
+* Break browser cache: simple add this string appending to a file url: `?{{site.time | date: '%s%N'}}` eg `<script src="{{ boundle_src | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>`
 
 #### jekyll
 
